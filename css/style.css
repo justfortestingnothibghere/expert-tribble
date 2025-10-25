@@ -1,0 +1,17 @@
+/* Custom styles for the music player and other elements */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+#audioPlayer {
+  width: 100%;
+}
+
+#seekBar, #volumeControl {
+  accent-color: #3b82f6;
+}
+
+button:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+}
