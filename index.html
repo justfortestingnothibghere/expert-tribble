@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Sharing Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold">MusicVibe</a>
+      <div>
+        <a href="/dashboard.html" class="mx-2 hover:text-blue-400">Dashboard</a>
+        <a href="/search.html" class="mx-2 hover:text-blue-400">Search</a>
+        <a href="/profile.html" class="mx-2 hover:text-blue-400">Profile</a>
+        <a href="/premium.html" class="mx-2 hover:text-blue-400">Premium</a>
+        <a href="/about.html" class="mx-2 hover:text-blue-400">About</a>
+        <a href="/saved.html" class="mx-2 hover:text-blue-400">Saved</a>
+        <a href="/history.html" class="mx-2 hover:text-blue-400">History</a>
+        <a href="/admin.html" class="mx-2 hover:text-blue-400">Admin</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Music Player -->
+  <div class="container mx-auto py-8">
+    <h1 class="text-4xl font-bold text-center mb-8">Welcome to MusicVibe</h1>
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md mx-auto">
+      <audio id="audioPlayer" src=""></audio>
+      <div class="flex justify-between items-center mb-4">
+        <span id="currentSong" class="text-lg">Select a song</span>
+        <span id="currentTime">0:00</span>
+      </div>
+      <input type="range" id="seekBar" value="0" max="100" class="w-full">
+      <div class="flex justify-between items-center mt-4">
+        <button id="playPause" class="bg-blue-500 text-white px-4 py-2 rounded">Play</button>
+        <input type="range" id="volumeControl" value="1" min="0" max="1" step="0.01" class="w-24">
+        <button id="downloadBtn" class="bg-green-500 text-white px-4 py-2 rounded" disabled>Download</button>
+      </div>
+    </div>
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold">Available Songs</h2>
+      <ul id="songList" class="mt-4 space-y-2"></ul>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between">
+      <a href="/" class="text-2xl font-bold">MusicVibe</a>
+      <a href="/" class="hover:text-blue-400">Back to Home</a>
+    </div>
+  </nav>
+  <div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">Admin Panel</h1>
+    <!-- Song Upload -->
+    <div class="bg-gray-800 p-6 rounded-lg mb-8">
+      <h2 class="text-2xl font-bold mb-4">Upload Song</h2>
+      <form id="uploadSongForm" enctype="multipart/form-data">
+        <input type="text" id="songName" placeholder="Song Name" class="bg-gray-700 p-2 rounded w-full mb-2">
+        <input type="file" id="songFile" accept="audio/*" class="mb-2">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Upload</button>
+      </form>
+    </div>
+    <!-- User Management -->
+    <div class="bg-gray-800 p-6 rounded-lg">
+      <h2 class="text-2xl font-bold mb-4">Manage Users</h2>
+      <ul id="userList" class="space-y-2"></ul>
+    </div>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
