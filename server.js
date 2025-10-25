@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static('.'));
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost/musicvibe', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://user1:arman@filesharingapp.wtal1j5.mongodb.net/?appName=FileSharingApp', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Schemas
 const UserSchema = new mongoose.Schema({
